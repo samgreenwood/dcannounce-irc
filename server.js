@@ -10,13 +10,12 @@ var client = new irc.Client('localhost', 'Goonbot', {
 
 var server = net.createServer(function (socket) {
     socket.on('data', function (data) {
-        client.say('#goontest', data);
+        client.say('#allthefiles', data);
     });
 });
 
 client.connect(5, function () {
-    client.join('#goontest', function () {
-    });
+    client.join('#allthefiles');
 });
 
 client.addListener("message", function (from, to, text, message) {
@@ -45,4 +44,3 @@ client.addListener("message", function (from, to, text, message) {
 });
 
 server.listen('54321')
-
