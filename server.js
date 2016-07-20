@@ -4,7 +4,7 @@ var net = require('net');
 var sprintf = require('sprintf');
 var filesize = require('filesize');
 
-var client = new irc.Client('localhost', 'Goonbot', {
+var client = new irc.Client('localhost', 'AnnounceBot', {
     autoConnect: false
 });
 
